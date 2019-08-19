@@ -2,16 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="69de41a6-0eb3-4047-b421-7e6d1c2cd0c3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/WanderingSpider.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/db/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/db/hdfs.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spider/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spider/parser.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spider/spider.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spider/parser.py" beforeDir="false" afterPath="$PROJECT_DIR$/spider/parser.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spider/spider.py" beforeDir="false" afterPath="$PROJECT_DIR$/spider/spider.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -20,14 +13,14 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="false">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="123">
-              <caret line="33" column="23" selection-start-line="33" selection-start-column="8" selection-end-line="33" selection-end-column="23" />
+            <state relative-caret-position="260">
+              <caret line="47" selection-start-line="47" selection-end-line="47" />
               <folding>
-                <element signature="e#0#19#0" expanded="true" />
+                <element signature="e#15#21#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -36,8 +29,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/spider/parser.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="28" selection-start-line="5" selection-start-column="28" selection-end-line="5" selection-end-column="28" />
+            <state relative-caret-position="120">
+              <caret line="8" column="25" lean-forward="true" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="25" />
             </state>
           </provider>
         </entry>
@@ -45,8 +38,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/spider/spider.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1158">
-              <caret line="18" column="13" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="13" />
+            <state relative-caret-position="-11">
+              <caret line="89" column="21" selection-start-line="89" selection-start-column="19" selection-end-line="89" selection-end-column="21" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
               </folding>
@@ -54,11 +47,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/db/hdfs.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="320">
-              <caret line="29" column="35" lean-forward="true" selection-start-line="29" selection-start-column="35" selection-end-line="29" selection-end-column="35" />
+            <state relative-caret-position="-213">
+              <caret line="1" selection-start-line="1" selection-end-line="1" />
               <folding>
                 <element signature="e#15#31#0" expanded="true" />
               </folding>
@@ -84,10 +77,10 @@
         <option value="$PROJECT_DIR$/db/hbase.py" />
         <option value="$PROJECT_DIR$/db/hdfsbase.py" />
         <option value="$PROJECT_DIR$/dfs/hbase.py" />
-        <option value="$PROJECT_DIR$/spider/parser.py" />
         <option value="$PROJECT_DIR$/spider/spider.py" />
-        <option value="$PROJECT_DIR$/main.py" />
         <option value="$PROJECT_DIR$/db/hdfs.py" />
+        <option value="$PROJECT_DIR$/spider/parser.py" />
+        <option value="$PROJECT_DIR$/main.py" />
       </list>
     </option>
   </component>
@@ -111,11 +104,6 @@
             <path>
               <item name="WanderingSpider" type="b2602c69:ProjectViewProjectNode" />
               <item name="WanderingSpider" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="WanderingSpider" type="b2602c69:ProjectViewProjectNode" />
-              <item name="WanderingSpider" type="462c0819:PsiDirectoryNode" />
-              <item name="db" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="WanderingSpider" type="b2602c69:ProjectViewProjectNode" />
@@ -218,13 +206,9 @@
     <frame x="10" y="42" width="1260" height="684" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Favorites" side_tool="true" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21711057" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Python Console" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.3935811" />
@@ -232,6 +216,10 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Python Console" order="10" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -244,9 +232,7 @@
     <entry file="file://$PROJECT_DIR$/db/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/db/hdfsbase.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/db/hdfsbase.py" />
     <entry file="file://$USER_HOME$/.conda/envs/leetcode/lib/python3.7/tokenize.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="110">
@@ -254,13 +240,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dfs/db.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="29" selection-start-line="9" selection-start-column="29" selection-end-line="9" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/dfs/db.py" />
     <entry file="file://$USER_HOME$/.conda/envs/leetcode/lib/python3.7/site-packages/happybase/table.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="124">
@@ -268,27 +248,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="123">
-          <caret line="33" column="23" selection-start-line="33" selection-start-column="8" selection-end-line="33" selection-end-column="23" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/spider/parser.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="28" selection-start-line="5" selection-start-column="28" selection-end-line="5" selection-end-column="28" />
+        <state relative-caret-position="120">
+          <caret line="8" column="25" lean-forward="true" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="25" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/spider/spider.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1158">
-          <caret line="18" column="13" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="13" />
+        <state relative-caret-position="-11">
+          <caret line="89" column="21" selection-start-line="89" selection-start-column="19" selection-end-line="89" selection-end-column="21" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
           </folding>
@@ -297,10 +267,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/db/hdfs.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="29" column="35" lean-forward="true" selection-start-line="29" selection-start-column="35" selection-end-line="29" selection-end-column="35" />
+        <state relative-caret-position="-213">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
           <folding>
             <element signature="e#15#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="47" selection-start-line="47" selection-end-line="47" />
+          <folding>
+            <element signature="e#15#21#0" expanded="true" />
           </folding>
         </state>
       </provider>

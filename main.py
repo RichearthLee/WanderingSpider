@@ -1,3 +1,5 @@
+# coding=utf-8
+import random
 from db import hdfs
 from spider.spider import Fetch
 from spider.parser import Parser
@@ -9,7 +11,7 @@ history_url_set = list()
 dbconn = hdfs.HBase("9.111.141.58", "webspider:webindex")
 
 # start url
-url = "http://www.sina.com/"
+url = "http://www.163.com/"
 
 f = Fetch()
 while True:
@@ -20,7 +22,8 @@ while True:
             if len(current_url_set) > 0:
                 url = current_url_set.pop()
             else:
-                current_url_set = history_url_set.pop(0)
+                current_url_set = random.choice(history_url_set)
+                history_url_set.remove(current_url_set)
                 url = current_url_set.pop()
             continue
 
@@ -36,8 +39,13 @@ while True:
         for link in linklist:
             current_url_set.add(link)
 
-        url = current_url_set.pop()
-        history_url_set = Parser.inserttohistory(current_url_set, history_url_set)
+        if len(current_url_set) > 0:
+            url = current_url_set.pop()
+            history_url_set = Parser.inserttohistory(current_url_set, history_url_set)
+        else:
+            current_url_set = random.choice(history_url_set)
+            history_url_set.remove(current_url_set)
+            url = current_url_set.pop()
 
         print("history_url_set: " + str(len(history_url_set))
               + "    " + "current_url_set:    " + str(len(current_url_set)))
@@ -46,6 +54,7 @@ while True:
         if len(current_url_set) > 0:
             url = current_url_set.pop()
         else:
-            current_url_set = history_url_set.pop(0)
+            current_url_set = random.choice(history_url_set)
+            history_url_set.remove(current_url_set)
             url = current_url_set.pop()
         continue
