@@ -1,51 +1,17 @@
-#Visual Studio 2015 cache/options directory
-.vs/
-
-
-
-# Visual Studio cache files
-# files ending in .cache can be ignored
-*.[Cc]ache
-# but keep track of directories ending in .cache
-!*.[Cc]ache/
-
-
-# SQL Server files
-*.mdf
-*.ldf
-
-
-# Visual Studio 6 build log
-*.plg
-
-# Visual Studio 6 workspace options file
-*.opt
-
-# Visual Studio LightSwitch build output
-**/*.HTMLClient/GeneratedArtifacts
-**/*.DesktopClient/GeneratedArtifacts
-**/*.DesktopClient/ModelManifest.xml
-**/*.Server/GeneratedArtifacts
-**/*.Server/ModelManifest.xml
-
 
 # JetBrains Rider
 .idea/
-.idea/*
 *.sln
 *.iml
 *.spec
-main.spec
 out/
 /build
 /dist
 /.metadata/
 
 __pycache__/
-__pycache__/*
 *.pyc
-*.*.pyc
-.vscode
+
 
 
 
