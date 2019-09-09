@@ -1,6 +1,11 @@
 # coding=utf-8
+
 import requests
+import random
+
 from bs4 import BeautifulSoup
+
+from spider.parser import Parser
 
 
 class Fetch(object):
@@ -82,20 +87,20 @@ class Fetch(object):
         for i in range(len(links)):
             try:
                 http = links[i].find('http')
-                if http < 0:
+                if http is None or http < 0:
                     rmindex.append(i)
                     continue
                 links[i] = links[i][http:]
                 sp = links[i].count('/')
-                if sp < 2:
+                if sp is None or sp < 2:
                     rmindex.append(i)
                     continue
-                if sp >= 3:
+                else:
                     while sp != 2:
                         ri: int = links[i].rfind('/')
                         links[i] = links[i][0: ri]
                         sp = links[i].count('/')
-                if links[i].count('.') < 1:
+                if links[i].count('.') is None or links[i].count('.') < 1:
                     rmindex.append(i)
                     continue
                 links[i] = links[i]+'/'
@@ -109,3 +114,36 @@ class Fetch(object):
             links.pop(n)
         return links
 
+    @staticmethod
+    def selectdifferenturl(current_url_set: list, history_url_set: list, url: str):
+        new_url = url
+        while new_url == url:
+            try:
+                current_url_set.remove(url)
+            except Exception:
+                None
+            if len(current_url_set) > 0:
+                new_url = random.choice(current_url_set)
+            else:
+                current_url_set = random.choice(history_url_set)
+                history_url_set.remove(current_url_set)
+        return new_url
+
+    @staticmethod
+    def selectdifferenturlandinserthistory(current_url_set: list, history_url_set: list, url: str, size: int):
+        new_url = url
+        flag = True
+        while new_url == url:
+            try:
+                current_url_set.remove(url)
+            except Exception:
+                None
+            if len(current_url_set) > 0:
+                new_url = random.choice(current_url_set)
+            else:
+                flag = False
+                current_url_set = random.choice(history_url_set)
+                history_url_set.remove(current_url_set)
+        if flag and len(current_url_set) > 0:
+            Parser.inserttohistory(current_url_set, history_url_set, size)
+        return new_url

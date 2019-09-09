@@ -8,7 +8,7 @@ class HBase(object):
     conn = None
     table = None
 
-    def __init__(self, ip , tablename):
+    def __init__(self, ip, tablename):
         self.conn = happybase.Connection(ip, 9090)
         self.table = self.conn.table(tablename)
 
@@ -23,7 +23,7 @@ class HBase(object):
         res = res.get(b'index:num')
         if not res:
             self.table.put(url, {"index:num": "1"})
-            print("DB INSERT:  " + url)
+            # print("DB INSERT:  " + url)
             return
         res = int(res)
         res = res + 1

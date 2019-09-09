@@ -1,13 +1,15 @@
 # coding=utf-8
+import random
+
+
 class Parser(object):
 
     @staticmethod
-    def inserttohistory(current: set, history: list) -> list:
-        newcurrent = set()
+    def inserttohistory(current: list, history: list, size: int) -> list:
         newcurrent = current.copy()
-        if len(history) >= 10:
+        if len(history) >= size:
             history.pop()
-            history.insert(0, newcurrent)
+            history.insert(random.randint(0, size), newcurrent)
         else:
-            history.insert(0, newcurrent)
+            history.insert(random.randint(0, len(history)), newcurrent)
         return history

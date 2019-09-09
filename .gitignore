@@ -35,15 +35,18 @@
 *.sln
 *.iml
 *.spec
+main.spec
 out/
 /build
 /dist
 /.metadata/
 
-
-# Python Tools for Visual Studio (PTVS)
 __pycache__/
+__pycache__/*
 *.pyc
 *.*.pyc
 .vscode
+
+
+
 
