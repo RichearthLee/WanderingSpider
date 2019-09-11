@@ -19,11 +19,8 @@ importlib-metadata==0.19
 incremental==17.5.0
 lxml==4.4.1
 macholib==1.11
-mkl-fft==1.0.14
-mkl-random==1.0.2
-mkl-service==2.3.0
 more-itertools==7.2.0
-numpy==1.16.4
+numpy==1.17.2
 packaging==19.1
 parsel==1.5.1
 pluggy==0.12.0
