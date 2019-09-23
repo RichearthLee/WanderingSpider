@@ -1,5 +1,6 @@
 [main]
 startURL = www.baidu.com
+threads = 10
 # mysql redis hbase
 dbtype = hbase
 

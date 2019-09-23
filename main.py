@@ -3,27 +3,32 @@
 from spider.spider import Fetch
 from spider.parser import Parser
 from db.controller import Controller
+
+from concurrent.futures import ThreadPoolExecutor
 import configparser
 
-config = configparser.ConfigParser()
+
+# def execution(url):
 current_url_set = list()
 history_url_set = list()
-
 dbctl = Controller()
-
-# start url
-url = config["main"]["startURL"]
 
 f = Fetch()
 p = Parser()
+url = "www.baidu.com"
 while True:
     try:
         html = f.gethtml(url)
         if not html:
             print("Exception:   " + "get no text")
             url = p.selectdifferenturl(current_url_set, history_url_set, url)
+            continue
 
         linklist = Fetch.parselink(html)
+        if not linklist:
+            print("Exception:   " + "get no links")
+            url = p.selectdifferenturl(current_url_set, history_url_set, url)
+            continue
 
         for link in linklist:
             dbctl.insert(link, " ")
@@ -43,3 +48,17 @@ while True:
 
         url = p.selectdifferenturl(current_url_set, history_url_set, url)
         continue
+
+
+# config = configparser.ConfigParser()
+# config.read("config")
+# print(config.sections())
+# # start url
+# starturl = config['main']['startURL']
+# threads = config["main"]["threads"]
+# threads = int(threads)
+# t = ThreadPoolExecutor(max_workers=threads)
+#
+# for i in range(threads):
+#     t.submit(execution, starturl)
+

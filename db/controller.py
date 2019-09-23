@@ -2,6 +2,7 @@ import configparser
 from db import dbhbase
 
 config = configparser.ConfigParser()
+config.read("config")
 
 
 class Controller(object):

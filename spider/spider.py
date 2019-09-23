@@ -18,7 +18,7 @@ class Fetch(object):
 
     def gethtml(self, url: str) -> str:
         try:
-            res = requests.get(url, headers=self.headers, timeout=(5, 7))
+            res = requests.get("http://"+url, headers=self.headers, timeout=(5, 7))
         except Exception as e:
             print("CONNECT Exception:   " + url + " " + str(e))
             return None
@@ -32,6 +32,8 @@ class Fetch(object):
     def parselink(html: str):
         soup = BeautifulSoup(html, 'html.parser')
         links = soup.select('a')
+        if not links:
+            return None
         rmidx = list()
         for i in range(len(links)):
             try:
@@ -41,7 +43,7 @@ class Fetch(object):
                     rmidx.append(i)
                     continue
             except Exception as e:
-                print("PARSER ERROR:    " + str(e))
+                # print("PARSER ERROR:    " + str(e))
                 rmidx.append(i)
                 continue
         rmidx.reverse()
@@ -49,8 +51,7 @@ class Fetch(object):
             links.pop(n)
         links = Fetch.formatrawurl(links)
         for li in range(len(links)):
-            if Fetch.verifyurl(links[li]):
-                links[li] = Fetch.verifyurl(links[li])
+            links[li] = Fetch.verifyurl(links[li])
         links = set(links)
         return list(links)
 
@@ -59,9 +60,6 @@ class Fetch(object):
         http = strurl.find("http")
         https = strurl.find("https")
 
-        if http is not 0:
-            return False
-
         if https is 0:
             strurl = strurl[5:]
         else:
@@ -69,15 +67,12 @@ class Fetch(object):
 
         prefix = strurl.find("://")
 
-        if prefix is not 0:
-            return False
 
         strurl = strurl[3:]
 
-        isend = strurl.endswith("/")
-        onlyend = strurl.count("/")
+        end = strurl.count("/")
 
-        if not isend and onlyend is not 1:
+        if end is not 0:
             return False
         return strurl
 
