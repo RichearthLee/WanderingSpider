@@ -1,0 +1,26 @@
+[main]
+startURL = www.baidu.com
+# mysql redis hbase
+dbtype = hbase
+
+[headers]
+User-Agent = Mozilla/5.0 (Macintosh; Intel Mac OS X 10.14; rv:68.0) Gecko/20100101 Firefox/68.0
+
+[mysql]
+host = 127.0.0.1
+port = 3306
+password = 123456
+schema = webspider
+
+[redis]
+host = 127.0.0.1
+port = 3697
+password = 123456
+dbnum = 1
+
+[hbase]
+host = 9.111.141.58
+port = 9090
+password = 123456
+table = webspider:webindex
+

@@ -47,12 +47,12 @@ class Fetch(object):
         rmidx.reverse()
         for n in range(len(rmidx)):
             links.pop(n)
-        Fetch.formatrawurl(links)
-        return links
-
-    @staticmethod
-    def geturlfromhtml(html):
-        set.add(1)
+        links = Fetch.formatrawurl(links)
+        for li in range(len(links)):
+            if Fetch.verifyurl(links[li]):
+                links[li] = Fetch.verifyurl(links[li])
+        links = set(links)
+        return list(links)
 
     @staticmethod
     def verifyurl(strurl: str):
@@ -79,7 +79,7 @@ class Fetch(object):
 
         if not isend and onlyend is not 1:
             return False
-        return True
+        return strurl
 
     @staticmethod
     def formatrawurl(links: list):
@@ -103,7 +103,7 @@ class Fetch(object):
                 if links[i].count('.') is None or links[i].count('.') < 1:
                     rmindex.append(i)
                     continue
-                links[i] = links[i]+'/'
+                # links[i] = links[i]+'/'
             except Exception as e:
                 print("FORMAT ERROR:    " + str(e))
                 rmindex.append(i)
@@ -114,36 +114,4 @@ class Fetch(object):
             links.pop(n)
         return links
 
-    @staticmethod
-    def selectdifferenturl(current_url_set: list, history_url_set: list, url: str):
-        new_url = url
-        while new_url == url:
-            try:
-                current_url_set.remove(url)
-            except Exception:
-                None
-            if len(current_url_set) > 0:
-                new_url = random.choice(current_url_set)
-            else:
-                current_url_set = random.choice(history_url_set)
-                history_url_set.remove(current_url_set)
-        return new_url
 
-    @staticmethod
-    def selectdifferenturlandinserthistory(current_url_set: list, history_url_set: list, url: str, size: int):
-        new_url = url
-        flag = True
-        while new_url == url:
-            try:
-                current_url_set.remove(url)
-            except Exception:
-                None
-            if len(current_url_set) > 0:
-                new_url = random.choice(current_url_set)
-            else:
-                flag = False
-                current_url_set = random.choice(history_url_set)
-                history_url_set.remove(current_url_set)
-        if flag and len(current_url_set) > 0:
-            Parser.inserttohistory(current_url_set, history_url_set, size)
-        return new_url
