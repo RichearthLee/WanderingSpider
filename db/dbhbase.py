@@ -22,7 +22,7 @@ class HBase(object):
         res = res.get(b'index:num')
         if not res:
             self.table.put(url, {"index:num": "1"})
-            # self.table.put(url, {"index:num": "1"})
+            self.table.put(url, {"info:title": title})
             # print("DB INSERT:  " + url)
             return
         res = int(res)

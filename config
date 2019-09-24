@@ -1,8 +1,9 @@
 [main]
-startURL = www.baidu.com
+startURL = cloud.baidu.com
 threads = 10
 # mysql redis hbase
 dbtype = hbase
+historysize = 20
 
 [headers]
 User-Agent = Mozilla/5.0 (Macintosh; Intel Mac OS X 10.14; rv:68.0) Gecko/20100101 Firefox/68.0
