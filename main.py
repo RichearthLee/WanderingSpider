@@ -23,7 +23,7 @@ def execution(url, historysize):
             #     print("Exception:   " + "get no text")
             #     url = p.selectdifferenturl(current_url_set, history_url_set, url)
             #     continue
-
+            print("Currenr url: " + url)
             resbody = f.parselink(url)
             if not resbody:
                 print("Exception:   " + "get nothing")

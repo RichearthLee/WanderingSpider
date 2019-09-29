@@ -1,8 +1,8 @@
 [main]
 startURL = cloud.baidu.com
-threads = 10
+threads = 5
 # mysql redis hbase
-dbtype = hbase
+dbtype = redis
 historysize = 20
 
 [headers]
@@ -15,10 +15,10 @@ password = 123456
 schema = webspider
 
 [redis]
-host = 127.0.0.1
-port = 3697
-password = 123456
-dbnum = 1
+host = 9.110.84.27
+port = 6379
+password = dbadmin
+dbnum = 0
 
 [hbase]
 host = 9.111.141.58

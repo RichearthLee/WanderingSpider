@@ -7,9 +7,9 @@ class HBase(object):
     conn = None
     table = None
 
-    def __init__(self, url, port, tablename):
-        self.conn = happybase.Connection(url, 9090)
-        self.table = self.conn.table(tablename)
+    def __init__(self, host, port, table):
+        self.conn = happybase.Connection(host, port)
+        self.table = self.conn.table(table)
 
     def getalltables(self):
         return self.conn.tables()
