@@ -23,7 +23,7 @@ mkl-fft==1.0.14
 mkl-random==1.0.2
 mkl-service==2.3.0
 more-itertools==7.2.0
-numpy==1.16.4
+numpy==1.22.0
 packaging==19.1
 parsel==1.5.1
 pluggy==0.12.0
